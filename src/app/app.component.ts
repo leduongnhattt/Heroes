@@ -4,11 +4,12 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HeroesComponent } from "./heroes/heroes.component";
 import { MessagesComponent } from "./messages/messages.component";
 import { BrowserModule } from '@angular/platform-browser';
+import { HeroFormComponent } from "./hero-form/hero-form.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeroesComponent, MessagesComponent, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, HeroesComponent, MessagesComponent, RouterLink, RouterLinkActive, HeroFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
