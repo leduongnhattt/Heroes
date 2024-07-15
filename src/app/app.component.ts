@@ -1,7 +1,9 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HeroesComponent } from "./heroes/heroes.component";
 import { MessagesComponent } from "./messages/messages.component";
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',

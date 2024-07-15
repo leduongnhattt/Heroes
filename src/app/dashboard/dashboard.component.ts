@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from '../model/hero';
 import { RouterLink, RouterModule } from '@angular/router';
 
+
 @Component({
   selector: 'app-dashboard',
   standalone: true,
@@ -12,17 +13,17 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent implements OnInit {
-  heroes: Hero [] = []
-  constructor(private heroService: HeroService) {
+  heroes: Hero[] = [];
 
-  }
+  constructor(private heroService: HeroService) { }
+
   ngOnInit(): void {
     this.getHeroes();
   }
-  getHeroes = () => {
-    this.heroService.getHeroes().subscribe((hero) => {
-      this.heroes = hero.slice(1, 5);
-  })
-}
+
+  getHeroes(): void {
+    this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+  }
 
 }
